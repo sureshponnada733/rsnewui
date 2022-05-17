@@ -1,0 +1,85 @@
+@import '/src/customvariables/customvariables.scss';
+@import '/src/mixins/mixins.scss';
+
+#rsui__footerlinks {
+    .rsui__footerlinks__container {
+        padding: $Variable_readyassist_layoutpadding;
+        @include flex_ai_jc(flex-start, space-between);
+        justify-content: space-around;
+        .rsui__footerlinks__card {
+            color: $Variable_readyassist_navlink__fc_white;
+            flex-basis: 34%;
+            margin: 0px 10px;
+
+            .rs__sociallinks {
+                img {
+                    margin: 0 3px;
+                    width: 30px;
+                }
+            }
+
+            span.email__seprator {
+                margin: 0 4px;
+                width: 1px;
+                height: 8px;
+                background: $Variable_readyassist_layout__bgwhite;
+                position: relative;
+                display: inline-flex;
+            }
+
+            a {
+                color: $Variable_readyassist_navlink__fc_white;
+            }
+
+            p {
+                font-size: 0.813rem;
+            }
+
+            address {
+                font-size: 0.813rem;
+            }
+
+            span {
+                text-transform: uppercase;
+            }
+
+            h3.text-warning {
+                font-size: 1.2rem;
+                margin-top: 1.7rem;
+
+                &::after {
+                    content: '';
+                    width: 40px;
+                    height: 2px;
+                    background: #9b988f;
+                    display: block;
+                    position: absolute;
+                    transform: translate(-3%, 5px);
+                }
+            }
+
+            ul.quicklinks__list {
+                padding-left: 0;
+
+                li {
+                    margin: 0.8rem 0;
+
+                    a {
+                        color: $Variable_readyassist_navlink__fc_white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    #rsui__footerlinks {
+        .rsui__footerlinks__container {
+            flex-wrap: wrap;
+            margin: 0;
+        }
+    }
+
+}

@@ -1,0 +1,96 @@
+@import '/src/customvariables/customvariables.scss';
+@import '/src/mixins/mixins.scss';
+
+#rsui__googlereviews {
+    .rsui__googlereviews__container {
+       padding: $Variable_readyassist_layoutpadding;
+        background-color: aliceblue;
+        h1{
+            text-align: center;
+            margin: 0 0 3rem;
+            &::before {
+                display:block;
+                width: 64px;
+                height: 8px;
+                position: relative;
+                margin: 12px auto;
+                top: 91px;
+                background-image: url('../../assets/images/title_seprator.svg');
+                content: '';
+            }
+        }
+        .reviewer_card{
+            img{
+                width: 60px;
+            }
+        }
+.rsui__googlereviews__googlerating__count{
+    img{
+        width: 120px;
+    }
+    .write__review__card {
+        float: right;
+        position: relative;
+        transform: translate(-10%, -170%);
+
+    }
+    .total__count{
+        .rating {
+            font-size: 21px;
+            margin-right: 9px;
+        }
+        .star__count {
+            color: $Variable_readyassist_staricon_color;
+            font-size: 13px;
+        }
+        .total__count {
+            color: var(--text-color);
+        }
+        span{
+        font-family: initial;
+    }
+}
+}
+        .rsui__googlereviews__container__card {
+            // font-size: 30px;
+            @include flex_ai_jc(center, center);
+
+            .rsui__googlereviews__slider {
+                background: $Variable_readyassist_layout__bgwhite;
+                margin: 15px 10px;
+                box-shadow: 0 2px 5px 0 rgb(17 121 239 / 15%);
+                border-radius: 10px;
+                padding: 10px 51px;
+
+                .star__rating {
+                    text-align: center;
+                    font-size: 1.2rem;
+                    color: $Variable_readyassist_staricon_color;
+                    padding: 12px;
+                }
+            }
+
+            .rsui__googlereviewer {
+                text-align: center;
+
+                .rsui__googlereviews__seprator {
+                    width: 42px;
+                    background: #e5dfdf;
+                    height: 2px;
+                    margin: 15px auto;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:768px) {
+    #rsui__googlereviews{
+        .rsui__googlereviews__container{
+            .rsui__googlereviews__container__card{
+                flex-wrap: wrap;
+            }
+        }
+    }   
+}

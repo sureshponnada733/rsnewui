@@ -1,0 +1,99 @@
+@import '/src/customvariables/customvariables.scss';
+@import '/src/mixins/mixins.scss';
+
+#rsui__footer__rewards {
+    background-color: aliceblue;
+
+    .polyshapebg {
+        background-color: #013e64;
+        //  #013e64;
+        clip-path: polygon(100% 8%, 100% 94%, 0 100%, 0 0);
+
+
+
+        .rsui__footer__rewards__container {
+            @include flex_ai_jc(center, space-between);
+            padding: 50px 0;
+            width: 90%;
+            margin: 0 auto;
+
+            .rewards__card {
+
+                // display: flex;
+                // align-items: center;
+                .rewards__list__icon {
+                    text-align: center;
+
+                    img {
+                        width: 30%;
+                        background: #a8a5a5;
+                        border-radius: 50%;
+                        padding: 12px;
+                    }
+                }
+
+                .rewards__list__count__card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    p.rewards__list__count {
+                        font-size: 2.3rem;
+                        color: #fd6b1c;
+                        margin: 0;
+                    }
+
+                    p.rewards__list__text {
+                        font-size: 1rem;
+                        color: $Variable_readyassist_navlink__fc_white;
+                        margin: 12px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    #rsui__footer__rewards {
+        .polyshapebg {
+            .rsui__footer__rewards__container {
+                .rewards__card {
+                    .rewards__list__count__card {
+                        .rewards__list__count {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:992px) and (min-width:500px) {
+    #rsui__footer__rewards {
+        .polyshapebg {
+            .rsui__footer__rewards__container {
+                                flex-wrap: wrap;
+                                .rewards__card {
+                                    flex-basis: 50%;
+                                    margin: 0 auto;
+                                }
+            }
+        }
+    }
+}
+
+@media (max-width:499px) {
+    #rsui__footer__rewards {
+        .polyshapebg {
+            .rsui__footer__rewards__container {
+                                flex-wrap: wrap;
+                                .rewards__card {
+                                    flex-basis: 100%;
+                                    margin: 0 auto;
+                                }
+            }
+        }
+    }   
+}

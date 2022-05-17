@@ -1,0 +1,19 @@
+@import '/src/customvariables/customvariables.scss';
+
+#rsui__footercpw{
+                .rsui__container-fluid{
+                    padding: 0;
+                    .rsui__footercpw__card{
+                        background-color: $Variable_readyassist_layout__ftr__copyright__bgc;
+                        padding: 10px 0;
+                        border-top: 2px solid #fec401;
+                        p{
+                            color: $Variable_readyassist_layout__bgwhite;
+                            text-align: center;
+                            font-size: 12px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+               
+            }

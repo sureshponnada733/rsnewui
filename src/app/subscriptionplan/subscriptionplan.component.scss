@@ -1,0 +1,114 @@
+@import '/src/customvariables/customvariables.scss';
+@import '/src/mixins/mixins.scss';
+
+#rsui__subscriptionplan {
+    .rsui__subscriptionplan__container {
+        background-color: $Variable_readyassist_layout__bgc;
+        padding: 15px 0;
+        .rsui__subscriptionplan_review{
+            .text__container{
+                .buynow__btn{
+                    button{
+                        background-color: #013e64;
+    border-color: #013e64;
+    &:hover{
+        background-color: #115e8f;
+    border-color: #115e8f;
+    }
+                    }
+                }
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0 0 3rem 0;
+
+            &::before {
+                display:block;
+                width: 64px;
+                height: 8px;
+                position: relative;
+                margin: 12px auto;
+                top: 91px;
+                background-image: url('../../assets/images/title_seprator.svg');
+                content: '';
+            }
+        }
+
+        .rsui__subscriptionplan__card {
+            max-width: 80%;
+        }
+
+        .rsui__subscriptionplan_review {
+            margin: 12px;
+            box-shadow: 0 2px 5px 0 rgb(17 121 239 / 15%);
+            border-radius: 30px 30px 15px 15px;
+            transition: all 0.5s ease;
+            background: $Variable_readyassist_layout__bgwhite;
+            border-bottom: 3px solid #fd6b1c;
+        }
+
+        .image__container {
+            img {
+                border-radius: 25px 25px 0px 0px;
+            }
+        }
+
+        .text__container {
+            margin-top: -8px;
+            margin: -24px 10px 0 10px;
+            z-index: 1;
+            background: $Variable_readyassist_navlink__fc_white;
+            position: relative;
+            border-radius: 6px;
+            padding: 12px;
+        }
+    }
+}
+
+// mobile responsive
+@media (max-width:768px) {
+    #rsui__subscriptionplan {
+        .rsui__subscriptionplan__container {
+            .rsui__subscriptionplan_review {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subtitle {
+    font-size: 24px;
+    color: #013e64;
+}
+.title h3 {
+    font-size: 1.3rem;
+    color: #fd6b1c;
+}
+.rupee_icon {
+    font-size: 1rem;
+    span{
+        font-size: 1.6rem;
+        margin-left: 10px;
+        color: #fd6b1c;
+    }
+}
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pricing {
+    border-top: 1.4px solid #e7e0e0;
+    padding-top: 13px;
+}
+.buynow__btn {
+    padding-top: 10px;
+}

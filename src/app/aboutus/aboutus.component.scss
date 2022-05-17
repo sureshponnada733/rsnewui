@@ -1,0 +1,53 @@
+@import '/src/customvariables/customvariables.scss';
+@import '/src/mixins/mixins.scss';
+
+#rsui__aboutus {
+    background: $Variable_readyassist_layout__bgc;
+
+    .rsui__aboutus__card {
+        padding: $Variable_readyassist_boxlayoutpadding;
+
+        .about__description {
+            .btn-readmore {
+                background-color: #013e64;
+                border-color: #013e64;
+
+                a {
+                    color: #fff;
+                }
+
+                &:hover {
+                    color: #fff;
+                    background-color: #115e8f;
+                    border-color: #115e8f;
+                }
+            }
+            h1 {
+                margin: 0 0 3rem 0;
+
+                &::before {
+                    display: block;
+                    width: 64px;
+                    height: 8px;
+                    position: relative;
+                    top: 79px;
+                    background-image: url('../../assets/images/title_seprator.svg');
+                    content: '';
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    #rsui__aboutus {
+        .rsui__aboutus__card {
+            .about__description {
+                margin: 1rem 0;
+
+          
+            }
+        }
+    }
+
+}
